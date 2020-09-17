@@ -33,8 +33,6 @@ var createElement = function (element, content) {
  */
 const El = function (element, content) {
 
-  console.log(typeof content, content);
-
   this.element = element;
   this.content = content;
 
