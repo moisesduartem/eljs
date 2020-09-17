@@ -3,9 +3,17 @@
  * @param {*} element 
  * @param {*} content 
  */
-const createElement = function (element, content) {
+var createElement = function (element, content) {
+
   if (!(typeof element === 'object')) {
     element = document.createElement(element);
+  }
+
+  if (Array.isArray(content)) {
+    content.forEach((el) => {
+      element.appendChild(el);
+    })
+    return element;
   }
 
   if (typeof content === 'object') {
@@ -16,8 +24,13 @@ const createElement = function (element, content) {
   const text = document.createTextNode(content);
   element.appendChild(text);
   return element;
-}
+};
 
+/**
+ * [Objeto responsável por executar as funções da lib.]
+ * @param {*} element 
+ * @param {*} content 
+ */
 const El = function (element, content) {
 
   console.log(typeof content, content);
