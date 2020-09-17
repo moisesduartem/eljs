@@ -3,10 +3,10 @@ import El from './El.js';
 
 let div = document.createElement('div');
 
-const HelloWorld = () => (
-  new El(new El(div, null, 'World'), null, 'Hello')
+const Hello = (props) => (
+  new El(new El(div, `Hello ${props.name}`), '!')
 );
 
-// console.log(HelloWorld());
+console.log(Hello({ name: 'Moisés' }));
 
-document.getElementById('root').appendChild(HelloWorld());
+document.getElementById('root').appendChild(Hello({ name: 'Moisés' }));

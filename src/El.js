@@ -1,7 +1,6 @@
-const El = function (element, props, content) {
+const El = function (element, content) {
 
   this.element = element;
-  this.props = props;
   this.content = content;
 
   this.createElement = function () {
