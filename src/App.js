@@ -1,7 +1,8 @@
 import El from './El.js';
+import Title from './components/Title.js';
 
 const App = () => (
-  new El('div', 'Hello World')
+  Title()
 );
 
 export default App;
